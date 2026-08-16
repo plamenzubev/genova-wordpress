@@ -65,3 +65,22 @@ function osteria_nova_dequeue_block_styles(): void {
 	wp_dequeue_style( 'global-styles' );
 }
 add_action( 'wp_enqueue_scripts', 'osteria_nova_dequeue_block_styles', 20 );
+
+/**
+ * Google Analytics 4 — replace OSTERIA_NOVA_GA_ID with a real Measurement ID
+ * before going live. Left in place so `reservation_submit` events (fired in
+ * assets/js/main.js on a successful booking) have somewhere to report to.
+ */
+function osteria_nova_analytics(): void {
+	$ga_id = 'G-XXXXXXXXXX';
+	?>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr( $ga_id ); ?>"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push( arguments ); }
+		gtag( 'js', new Date() );
+		gtag( 'config', '<?php echo esc_js( $ga_id ); ?>' );
+	</script>
+	<?php
+}
+add_action( 'wp_head', 'osteria_nova_analytics', 1 );

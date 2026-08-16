@@ -161,6 +161,9 @@
 				} )
 				.then( function ( json ) {
 					if ( json.success ) {
+						if ( typeof window.gtag === "function" ) {
+							window.gtag( "event", "reservation_submit", { guests: data.guests } );
+						}
 						successMessage.textContent =
 							"Благодарим ви, " + data.name.split( " " )[ 0 ] + ". Ще потвърдим резервацията ви на " + data.email + " възможно най-скоро.";
 						form.classList.add( "hidden" );
