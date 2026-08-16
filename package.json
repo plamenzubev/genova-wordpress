@@ -1,0 +1,14 @@
+{
+  "name": "osteria-nova-wp-theme",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build tooling for the Osteria Nova WordPress theme's Tailwind CSS. Not required at runtime — assets/css/main.css is committed pre-built.",
+  "scripts": {
+    "build": "tailwindcss -i assets/src/input.css -o assets/css/main.css --minify",
+    "watch": "tailwindcss -i assets/src/input.css -o assets/css/main.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}
