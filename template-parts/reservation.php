@@ -62,46 +62,46 @@ $hours = osteria_nova_opening_hours();
 
 			<div class="lg:col-span-3 js-reveal" data-reveal data-reveal-delay="100">
 				<form id="reservation-form" novalidate class="grid gap-5 rounded-3xl bg-cream/5 p-8 ring-1 ring-cream/10 sm:grid-cols-2">
-					<label class="block">
+					<label class="block min-w-0">
 						<span class="mb-1.5 block text-sm font-medium text-cream/80">Име и фамилия</span>
-						<input type="text" name="name" placeholder="Иван Иванов" class="reservation-input w-full rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream placeholder:text-cream/30 outline-none transition focus:border-gold" />
+						<input type="text" name="name" placeholder="Иван Иванов" class="reservation-input w-full min-w-0 rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream placeholder:text-cream/30 outline-none transition focus:border-gold" />
 						<span class="field-error mt-1 block text-xs text-terracotta"></span>
 					</label>
 
-					<label class="block">
+					<label class="block min-w-0">
 						<span class="mb-1.5 block text-sm font-medium text-cream/80">Имейл</span>
-						<input type="email" name="email" placeholder="ivan@email.com" class="reservation-input w-full rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream placeholder:text-cream/30 outline-none transition focus:border-gold" />
+						<input type="email" name="email" placeholder="ivan@email.com" class="reservation-input w-full min-w-0 rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream placeholder:text-cream/30 outline-none transition focus:border-gold" />
 						<span class="field-error mt-1 block text-xs text-terracotta"></span>
 					</label>
 
-					<label class="block">
+					<label class="block min-w-0">
 						<span class="mb-1.5 block text-sm font-medium text-cream/80">Телефон</span>
-						<input type="tel" name="phone" placeholder="+359 88 123 4567" class="reservation-input w-full rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream placeholder:text-cream/30 outline-none transition focus:border-gold" />
+						<input type="tel" name="phone" placeholder="+359 88 123 4567" class="reservation-input w-full min-w-0 rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream placeholder:text-cream/30 outline-none transition focus:border-gold" />
 						<span class="field-error mt-1 block text-xs text-terracotta"></span>
 					</label>
 
-					<label class="block">
+					<label class="block min-w-0">
 						<span class="mb-1.5 block text-sm font-medium text-cream/80">Брой гости</span>
-						<select name="guests" class="w-full rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream outline-none transition focus:border-gold">
+						<select name="guests" class="w-full min-w-0 rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream outline-none transition focus:border-gold">
 							<?php for ( $i = 1; $i <= 10; $i++ ) : ?>
 								<option value="<?php echo esc_attr( $i ); ?>" <?php selected( $i, 2 ); ?>><?php echo esc_html( $i ); ?> <?php echo 1 === $i ? 'гост' : 'гости'; ?></option>
 							<?php endfor; ?>
 						</select>
 					</label>
 
-					<label class="block">
+					<label class="block min-w-0">
 						<span class="mb-1.5 block text-sm font-medium text-cream/80">Дата</span>
-						<input type="date" name="date" class="reservation-input w-full rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream outline-none transition focus:border-gold" />
+						<input type="date" name="date" class="reservation-input w-full min-w-0 rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream outline-none transition focus:border-gold" />
 						<span class="field-error mt-1 block text-xs text-terracotta"></span>
 					</label>
 
-					<label class="block">
+					<label class="block min-w-0">
 						<span class="mb-1.5 block text-sm font-medium text-cream/80">Час</span>
-						<input type="time" name="time" class="reservation-input w-full rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream outline-none transition focus:border-gold" />
+						<input type="time" name="time" class="reservation-input w-full min-w-0 rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream outline-none transition focus:border-gold" />
 						<span class="field-error mt-1 block text-xs text-terracotta"></span>
 					</label>
 
-					<label class="block sm:col-span-2">
+					<label class="block min-w-0 sm:col-span-2">
 						<span class="mb-1.5 block text-sm font-medium text-cream/80">Съобщение (по желание)</span>
 						<textarea name="message" rows="3" placeholder="Специални изисквания, повод за празнуване..." class="w-full rounded-xl border border-cream/15 bg-espresso-2 px-4 py-2.5 text-sm text-cream placeholder:text-cream/30 outline-none transition focus:border-gold"></textarea>
 					</label>
